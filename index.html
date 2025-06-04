@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web to Case Form</title>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 80px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #0070d2;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005cbf;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Customer Feedback</h2>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000004KER8" method="POST">
+      <input type="hidden" name="orgid" value="00DgK000004KER8">
+      <input type="hidden" name="retURL" value="http://gmail.com">
+      
+      <!-- Optional Debug
+      <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="lakshyadadhich175@gmail.com">
+      -->
+
+      <label for="00NgK000012dRt7">Booking Number:</label>
+      <input id="00NgK000012dRt7" maxlength="20" name="00NgK000012dRt7" size="20" type="text" required>
+
+      <label for="00NgK000012dRuj">Feedback:</label>
+      <textarea id="00NgK000012dRuj" name="00NgK000012dRuj" rows="4" required></textarea>
+
+      <input type="submit" name="submit" value="Submit Feedback">
+    </form>
+  </div>
+
+</body>
+</html>
